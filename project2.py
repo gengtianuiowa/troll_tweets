@@ -21,7 +21,7 @@ import numpy
 
 # Load your CSV file
 # Replace 'your_dataset.csv' with the actual path or URL to your CSV file
-csv_file_path = '../russian-troll-tweets/IRAhandle_tweets_1.csv'
+csv_file_path = './russian-troll-tweets/IRAhandle_tweets_1.csv'
 df = pd.read_csv(csv_file_path)
 
 # Check the structure of your CSV file
@@ -70,7 +70,7 @@ def run_pretrained_model(sub_words, n_clusters):
     tokenized_data = [preprocess_text(text) for text in text_data]
 
     # Load pre-trained embeddings (GloVe in this example)
-    embedding_path = '../glove.6B.100d.txt'
+    embedding_path = './glove.6B.100d.txt'
     embeddings_index = {}
     with open(embedding_path, 'r', encoding='utf-8') as f:
         for line in f:
